@@ -1,0 +1,49 @@
+.abc-alert {
+  position: fixed;
+  top: 35px;
+  right: 20px;
+  padding: var(--padding-margin-small);
+  padding-right: var(--padding-margin);
+  min-width: 300px;
+  /* background: var(--color-danger); */
+  color: var(--color-white);
+  border-radius: var(--border-radius-extra-small);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-out;
+}
+:host([opened]) .abc-alert {
+  opacity: 1;
+  pointer-events: all;
+}
+
+:host([opened]) .primary {
+  background-color: var(--color-primary);
+}
+:host([opened]) .secondary {
+  background-color: var(--color-secondary);
+}
+:host([opened]) .success {
+  background-color: var(--color-success);
+}
+:host([opened]) .danger {
+  background-color: var(--color-danger);
+}
+:host([opened]) .warning {
+  background-color: var(--color-warning);
+}
+:host([opened]) .info {
+  background-color: var(--color-info);
+}
+:host([opened]) .light {
+  background-color: var(--color-light);
+}
+:host([opened]) .dark {
+  background-color: var(--color-dark);
+}
+:host([opened]) .white {
+  background-color: var(--color-white);
+}
+:host([opened]) .transparent {
+  background-color: var(--color-transparent);
+}

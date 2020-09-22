@@ -1,0 +1,8 @@
+#actions {
+  border-top: 1px solid #ccc;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1rem;
+  justify-content: flex-end;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>My web components</title>
+
+    <script type="module" src="/build/abc-microfront-components.esm.js"></script>
+    <script nomodule src="/build/abc-microfront-components.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      html {
+        --color-primary: #007bff;
+        --color-secondary: #6c757d;
+        --color-success: #28a745;
+        --color-danger: #dc3545;
+        --color-warning: #ffc107;
+        --color-info: #17a2b8;
+        --color-light: #f8f9fa;
+        --color-dark: #343a40;
+        --color-white: #ffffff;
+        --color-transparent: transparent;
+
+        --border-radius: 15px;
+        --border-radius-middle: 10px;
+        --border-radius-small: 5px;
+        --border-radius-extra-small: 5px;
+
+        --padding-margin: 30px;
+        --padding-margin-middle: 15px;
+        --padding-margin-small: 10px;
+        --padding-margin-extra-small: 5px;
+
+        --font-zise: 30px;
+        --font-zise-middle: 20px;
+        --font-zise-small: 15px;
+        --font-zise-extra-small: 10px;
+      }
+      body {
+        font-family: 'Noto Sans JP', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component> -->
+    <abc-button onclick="openAlert()" color="danger">Abrir alerta</abc-button>
+    <abc-button onclick="openModal()" color="info">Abrir modal</abc-button>
+    <abc-alert title="¡Advertencia!" content="Presta atención a esto" type="info"></abc-alert>
+    <abc-modal>
+      <abc-modal-header>
+        <abc-paragraph>Este es el header</abc-paragraph>
+      </abc-modal-header>
+      <abc-modal-body>
+        <abc-paragraph>Este es el body</abc-paragraph>
+      </abc-modal-body>
+      <abc-modal-footer>
+        <abc-button onclick="closeModal()">Cancelar</abc-button>
+        <abc-button color="primary" onclick="closeModal()">Aceptar</abc-button>
+      </abc-modal-footer>
+    </abc-modal>
+  </body>
+  <script>
+    function openAlert() {
+      const abcAlert = document.querySelector('abc-alert');
+      abcAlert.open();
+    }
+    function openModal() {
+      const abcModal = document.querySelector('abc-modal');
+      abcModal.open();
+    }
+
+    function closeModal() {
+      const abcModal = document.querySelector('abc-modal');
+      abcModal.close();
+    }
+  </script>
+</html>

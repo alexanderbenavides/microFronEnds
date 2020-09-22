@@ -1,0 +1,51 @@
+button {
+  border: 0;
+  padding: 10px 25px;
+  border-radius: 3px;
+  background-color: var(--color-secondary);
+  color: var(--color-light);
+  outline: none;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+:host([color]) button.primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+:host([color]) button.secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+:host([color]) button.success {
+  background-color: var(--color-success);
+  color: var(--color-white);
+}
+:host([color]) button.danger {
+  background-color: var(--color-danger);
+  color: var(--color-white);
+}
+:host([color]) button.warning {
+  background-color: var(--color-warning);
+  color: var(--color-white);
+}
+:host([color]) button.info {
+  background-color: var(--color-info);
+  color: var(--color-white);
+}
+:host([color]) button.light {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+:host([color]) button.dark {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+:host([color]) button.white {
+  background-color: var(--color-white);
+  color: var(--color-dark);
+}
+:host([color]) button.transparent {
+  background-color: var(--color-transparent);
+  color: var(--color-dark);
+}
