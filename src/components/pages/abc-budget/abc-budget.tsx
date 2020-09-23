@@ -1,11 +1,11 @@
 import { Component, h, Prop, Watch } from '@stencil/core';
 
 @Component({
-  tag: 'abc-badget',
-  styleUrl: './abc-badget.css',
+  tag: 'abc-budget',
+  styleUrl: './abc-budget.css',
   shadow: true,
 })
-export class AbcBadgeComponent {
+export class AbcBudgetComponent {
   @Prop({ reflect: true, mutable: true }) number: number = 0;
 
   _isNotNmber() {

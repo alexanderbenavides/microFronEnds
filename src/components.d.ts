@@ -13,7 +13,7 @@ export namespace Components {
         "title": string;
         "type": string;
     }
-    interface AbcBadget {
+    interface AbcBudget {
         "number": number;
     }
     interface AbcButton {
@@ -50,11 +50,11 @@ declare global {
         prototype: HTMLAbcAlertElement;
         new (): HTMLAbcAlertElement;
     };
-    interface HTMLAbcBadgetElement extends Components.AbcBadget, HTMLStencilElement {
+    interface HTMLAbcBudgetElement extends Components.AbcBudget, HTMLStencilElement {
     }
-    var HTMLAbcBadgetElement: {
-        prototype: HTMLAbcBadgetElement;
-        new (): HTMLAbcBadgetElement;
+    var HTMLAbcBudgetElement: {
+        prototype: HTMLAbcBudgetElement;
+        new (): HTMLAbcBudgetElement;
     };
     interface HTMLAbcButtonElement extends Components.AbcButton, HTMLStencilElement {
     }
@@ -112,7 +112,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "abc-alert": HTMLAbcAlertElement;
-        "abc-badget": HTMLAbcBadgetElement;
+        "abc-budget": HTMLAbcBudgetElement;
         "abc-button": HTMLAbcButtonElement;
         "abc-chart-bar": HTMLAbcChartBarElement;
         "abc-icon": HTMLAbcIconElement;
@@ -131,7 +131,7 @@ declare namespace LocalJSX {
         "title"?: string;
         "type"?: string;
     }
-    interface AbcBadget {
+    interface AbcBudget {
         "number"?: number;
     }
     interface AbcButton {
@@ -160,7 +160,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "abc-alert": AbcAlert;
-        "abc-badget": AbcBadget;
+        "abc-budget": AbcBudget;
         "abc-button": AbcButton;
         "abc-chart-bar": AbcChartBar;
         "abc-icon": AbcIcon;
@@ -177,7 +177,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "abc-alert": LocalJSX.AbcAlert & JSXBase.HTMLAttributes<HTMLAbcAlertElement>;
-            "abc-badget": LocalJSX.AbcBadget & JSXBase.HTMLAttributes<HTMLAbcBadgetElement>;
+            "abc-budget": LocalJSX.AbcBudget & JSXBase.HTMLAttributes<HTMLAbcBudgetElement>;
             "abc-button": LocalJSX.AbcButton & JSXBase.HTMLAttributes<HTMLAbcButtonElement>;
             "abc-chart-bar": LocalJSX.AbcChartBar & JSXBase.HTMLAttributes<HTMLAbcChartBarElement>;
             "abc-icon": LocalJSX.AbcIcon & JSXBase.HTMLAttributes<HTMLAbcIconElement>;
