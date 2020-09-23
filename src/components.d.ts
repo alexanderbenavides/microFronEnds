@@ -25,6 +25,10 @@ export namespace Components {
         "icon": string;
         "position": string;
     }
+    interface AbcLazyLoading {
+        "columns": number;
+        "multiple": string;
+    }
     interface AbcModal {
         "close": () => Promise<void>;
         "open": () => Promise<void>;
@@ -74,6 +78,12 @@ declare global {
         prototype: HTMLAbcIconElement;
         new (): HTMLAbcIconElement;
     };
+    interface HTMLAbcLazyLoadingElement extends Components.AbcLazyLoading, HTMLStencilElement {
+    }
+    var HTMLAbcLazyLoadingElement: {
+        prototype: HTMLAbcLazyLoadingElement;
+        new (): HTMLAbcLazyLoadingElement;
+    };
     interface HTMLAbcModalElement extends Components.AbcModal, HTMLStencilElement {
     }
     var HTMLAbcModalElement: {
@@ -116,6 +126,7 @@ declare global {
         "abc-button": HTMLAbcButtonElement;
         "abc-chart-bar": HTMLAbcChartBarElement;
         "abc-icon": HTMLAbcIconElement;
+        "abc-lazy-loading": HTMLAbcLazyLoadingElement;
         "abc-modal": HTMLAbcModalElement;
         "abc-modal-body": HTMLAbcModalBodyElement;
         "abc-modal-footer": HTMLAbcModalFooterElement;
@@ -143,6 +154,10 @@ declare namespace LocalJSX {
         "icon"?: string;
         "position"?: string;
     }
+    interface AbcLazyLoading {
+        "columns"?: number;
+        "multiple"?: string;
+    }
     interface AbcModal {
         "opened"?: boolean;
     }
@@ -164,6 +179,7 @@ declare namespace LocalJSX {
         "abc-button": AbcButton;
         "abc-chart-bar": AbcChartBar;
         "abc-icon": AbcIcon;
+        "abc-lazy-loading": AbcLazyLoading;
         "abc-modal": AbcModal;
         "abc-modal-body": AbcModalBody;
         "abc-modal-footer": AbcModalFooter;
@@ -181,6 +197,7 @@ declare module "@stencil/core" {
             "abc-button": LocalJSX.AbcButton & JSXBase.HTMLAttributes<HTMLAbcButtonElement>;
             "abc-chart-bar": LocalJSX.AbcChartBar & JSXBase.HTMLAttributes<HTMLAbcChartBarElement>;
             "abc-icon": LocalJSX.AbcIcon & JSXBase.HTMLAttributes<HTMLAbcIconElement>;
+            "abc-lazy-loading": LocalJSX.AbcLazyLoading & JSXBase.HTMLAttributes<HTMLAbcLazyLoadingElement>;
             "abc-modal": LocalJSX.AbcModal & JSXBase.HTMLAttributes<HTMLAbcModalElement>;
             "abc-modal-body": LocalJSX.AbcModalBody & JSXBase.HTMLAttributes<HTMLAbcModalBodyElement>;
             "abc-modal-footer": LocalJSX.AbcModalFooter & JSXBase.HTMLAttributes<HTMLAbcModalFooterElement>;
