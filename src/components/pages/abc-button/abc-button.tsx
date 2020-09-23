@@ -8,7 +8,7 @@ import { Component, h, Prop } from '@stencil/core';
 export class AbcButtonComponent {
   @Prop() color: string;
   render() {
-    console.log(this.color, 'jdjjdjdjdj');
+    // console.log(this.color, 'jdjjdjdjdj');
     return (
       <button type="button" class={this.color ? this.color : ''}>
         <slot />

@@ -13,8 +13,13 @@ export namespace Components {
         "title": string;
         "type": string;
     }
+    interface AbcBadget {
+        "number": number;
+    }
     interface AbcButton {
         "color": string;
+    }
+    interface AbcChartBar {
     }
     interface AbcIcon {
         "icon": string;
@@ -45,11 +50,23 @@ declare global {
         prototype: HTMLAbcAlertElement;
         new (): HTMLAbcAlertElement;
     };
+    interface HTMLAbcBadgetElement extends Components.AbcBadget, HTMLStencilElement {
+    }
+    var HTMLAbcBadgetElement: {
+        prototype: HTMLAbcBadgetElement;
+        new (): HTMLAbcBadgetElement;
+    };
     interface HTMLAbcButtonElement extends Components.AbcButton, HTMLStencilElement {
     }
     var HTMLAbcButtonElement: {
         prototype: HTMLAbcButtonElement;
         new (): HTMLAbcButtonElement;
+    };
+    interface HTMLAbcChartBarElement extends Components.AbcChartBar, HTMLStencilElement {
+    }
+    var HTMLAbcChartBarElement: {
+        prototype: HTMLAbcChartBarElement;
+        new (): HTMLAbcChartBarElement;
     };
     interface HTMLAbcIconElement extends Components.AbcIcon, HTMLStencilElement {
     }
@@ -95,7 +112,9 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "abc-alert": HTMLAbcAlertElement;
+        "abc-badget": HTMLAbcBadgetElement;
         "abc-button": HTMLAbcButtonElement;
+        "abc-chart-bar": HTMLAbcChartBarElement;
         "abc-icon": HTMLAbcIconElement;
         "abc-modal": HTMLAbcModalElement;
         "abc-modal-body": HTMLAbcModalBodyElement;
@@ -112,8 +131,13 @@ declare namespace LocalJSX {
         "title"?: string;
         "type"?: string;
     }
+    interface AbcBadget {
+        "number"?: number;
+    }
     interface AbcButton {
         "color"?: string;
+    }
+    interface AbcChartBar {
     }
     interface AbcIcon {
         "icon"?: string;
@@ -136,7 +160,9 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "abc-alert": AbcAlert;
+        "abc-badget": AbcBadget;
         "abc-button": AbcButton;
+        "abc-chart-bar": AbcChartBar;
         "abc-icon": AbcIcon;
         "abc-modal": AbcModal;
         "abc-modal-body": AbcModalBody;
@@ -151,7 +177,9 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "abc-alert": LocalJSX.AbcAlert & JSXBase.HTMLAttributes<HTMLAbcAlertElement>;
+            "abc-badget": LocalJSX.AbcBadget & JSXBase.HTMLAttributes<HTMLAbcBadgetElement>;
             "abc-button": LocalJSX.AbcButton & JSXBase.HTMLAttributes<HTMLAbcButtonElement>;
+            "abc-chart-bar": LocalJSX.AbcChartBar & JSXBase.HTMLAttributes<HTMLAbcChartBarElement>;
             "abc-icon": LocalJSX.AbcIcon & JSXBase.HTMLAttributes<HTMLAbcIconElement>;
             "abc-modal": LocalJSX.AbcModal & JSXBase.HTMLAttributes<HTMLAbcModalElement>;
             "abc-modal-body": LocalJSX.AbcModalBody & JSXBase.HTMLAttributes<HTMLAbcModalBodyElement>;
