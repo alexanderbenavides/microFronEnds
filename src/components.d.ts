@@ -21,6 +21,9 @@ export namespace Components {
     }
     interface AbcChartBar {
     }
+    interface AbcCustomization {
+        "values": any;
+    }
     interface AbcIcon {
         "icon": string;
         "position": string;
@@ -71,6 +74,12 @@ declare global {
     var HTMLAbcChartBarElement: {
         prototype: HTMLAbcChartBarElement;
         new (): HTMLAbcChartBarElement;
+    };
+    interface HTMLAbcCustomizationElement extends Components.AbcCustomization, HTMLStencilElement {
+    }
+    var HTMLAbcCustomizationElement: {
+        prototype: HTMLAbcCustomizationElement;
+        new (): HTMLAbcCustomizationElement;
     };
     interface HTMLAbcIconElement extends Components.AbcIcon, HTMLStencilElement {
     }
@@ -125,6 +134,7 @@ declare global {
         "abc-budget": HTMLAbcBudgetElement;
         "abc-button": HTMLAbcButtonElement;
         "abc-chart-bar": HTMLAbcChartBarElement;
+        "abc-customization": HTMLAbcCustomizationElement;
         "abc-icon": HTMLAbcIconElement;
         "abc-lazy-loading": HTMLAbcLazyLoadingElement;
         "abc-modal": HTMLAbcModalElement;
@@ -149,6 +159,9 @@ declare namespace LocalJSX {
         "color"?: string;
     }
     interface AbcChartBar {
+    }
+    interface AbcCustomization {
+        "values"?: any;
     }
     interface AbcIcon {
         "icon"?: string;
@@ -178,6 +191,7 @@ declare namespace LocalJSX {
         "abc-budget": AbcBudget;
         "abc-button": AbcButton;
         "abc-chart-bar": AbcChartBar;
+        "abc-customization": AbcCustomization;
         "abc-icon": AbcIcon;
         "abc-lazy-loading": AbcLazyLoading;
         "abc-modal": AbcModal;
@@ -196,6 +210,7 @@ declare module "@stencil/core" {
             "abc-budget": LocalJSX.AbcBudget & JSXBase.HTMLAttributes<HTMLAbcBudgetElement>;
             "abc-button": LocalJSX.AbcButton & JSXBase.HTMLAttributes<HTMLAbcButtonElement>;
             "abc-chart-bar": LocalJSX.AbcChartBar & JSXBase.HTMLAttributes<HTMLAbcChartBarElement>;
+            "abc-customization": LocalJSX.AbcCustomization & JSXBase.HTMLAttributes<HTMLAbcCustomizationElement>;
             "abc-icon": LocalJSX.AbcIcon & JSXBase.HTMLAttributes<HTMLAbcIconElement>;
             "abc-lazy-loading": LocalJSX.AbcLazyLoading & JSXBase.HTMLAttributes<HTMLAbcLazyLoadingElement>;
             "abc-modal": LocalJSX.AbcModal & JSXBase.HTMLAttributes<HTMLAbcModalElement>;
