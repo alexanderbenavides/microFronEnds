@@ -1,4 +1,4 @@
-import { Component, h, Listen, Prop } from '@stencil/core';
+import { Component, Fragment, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'abc-customization',
@@ -20,6 +20,6 @@ export class AbcIconComponent {
   }
 
   render() {
-    return null;
+    return <Fragment></Fragment>;
   }
 }
