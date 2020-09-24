@@ -46,6 +46,10 @@ export namespace Components {
     interface AbcParagraph {
         "color": string;
     }
+    interface AbcSwitch {
+        "type": string;
+        "value": number;
+    }
     interface AbcTitle {
         "color": string;
     }
@@ -123,6 +127,12 @@ declare global {
         prototype: HTMLAbcParagraphElement;
         new (): HTMLAbcParagraphElement;
     };
+    interface HTMLAbcSwitchElement extends Components.AbcSwitch, HTMLStencilElement {
+    }
+    var HTMLAbcSwitchElement: {
+        prototype: HTMLAbcSwitchElement;
+        new (): HTMLAbcSwitchElement;
+    };
     interface HTMLAbcTitleElement extends Components.AbcTitle, HTMLStencilElement {
     }
     var HTMLAbcTitleElement: {
@@ -142,6 +152,7 @@ declare global {
         "abc-modal-footer": HTMLAbcModalFooterElement;
         "abc-modal-header": HTMLAbcModalHeaderElement;
         "abc-paragraph": HTMLAbcParagraphElement;
+        "abc-switch": HTMLAbcSwitchElement;
         "abc-title": HTMLAbcTitleElement;
     }
 }
@@ -183,6 +194,10 @@ declare namespace LocalJSX {
     interface AbcParagraph {
         "color"?: string;
     }
+    interface AbcSwitch {
+        "type"?: string;
+        "value"?: number;
+    }
     interface AbcTitle {
         "color"?: string;
     }
@@ -199,6 +214,7 @@ declare namespace LocalJSX {
         "abc-modal-footer": AbcModalFooter;
         "abc-modal-header": AbcModalHeader;
         "abc-paragraph": AbcParagraph;
+        "abc-switch": AbcSwitch;
         "abc-title": AbcTitle;
     }
 }
@@ -218,6 +234,7 @@ declare module "@stencil/core" {
             "abc-modal-footer": LocalJSX.AbcModalFooter & JSXBase.HTMLAttributes<HTMLAbcModalFooterElement>;
             "abc-modal-header": LocalJSX.AbcModalHeader & JSXBase.HTMLAttributes<HTMLAbcModalHeaderElement>;
             "abc-paragraph": LocalJSX.AbcParagraph & JSXBase.HTMLAttributes<HTMLAbcParagraphElement>;
+            "abc-switch": LocalJSX.AbcSwitch & JSXBase.HTMLAttributes<HTMLAbcSwitchElement>;
             "abc-title": LocalJSX.AbcTitle & JSXBase.HTMLAttributes<HTMLAbcTitleElement>;
         }
     }
