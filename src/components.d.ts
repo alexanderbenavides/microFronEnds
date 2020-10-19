@@ -19,12 +19,14 @@ export namespace Components {
     interface AbcButton {
         "color": string;
     }
-    interface AbcChartBar {
-    }
     interface AbcCustomization {
         "values": any;
     }
     interface AbcIcon {
+        "icon": string;
+        "position": string;
+    }
+    interface AbcInput {
         "icon": string;
         "position": string;
     }
@@ -73,12 +75,6 @@ declare global {
         prototype: HTMLAbcButtonElement;
         new (): HTMLAbcButtonElement;
     };
-    interface HTMLAbcChartBarElement extends Components.AbcChartBar, HTMLStencilElement {
-    }
-    var HTMLAbcChartBarElement: {
-        prototype: HTMLAbcChartBarElement;
-        new (): HTMLAbcChartBarElement;
-    };
     interface HTMLAbcCustomizationElement extends Components.AbcCustomization, HTMLStencilElement {
     }
     var HTMLAbcCustomizationElement: {
@@ -90,6 +86,12 @@ declare global {
     var HTMLAbcIconElement: {
         prototype: HTMLAbcIconElement;
         new (): HTMLAbcIconElement;
+    };
+    interface HTMLAbcInputElement extends Components.AbcInput, HTMLStencilElement {
+    }
+    var HTMLAbcInputElement: {
+        prototype: HTMLAbcInputElement;
+        new (): HTMLAbcInputElement;
     };
     interface HTMLAbcLazyLoadingElement extends Components.AbcLazyLoading, HTMLStencilElement {
     }
@@ -143,9 +145,9 @@ declare global {
         "abc-alert": HTMLAbcAlertElement;
         "abc-budget": HTMLAbcBudgetElement;
         "abc-button": HTMLAbcButtonElement;
-        "abc-chart-bar": HTMLAbcChartBarElement;
         "abc-customization": HTMLAbcCustomizationElement;
         "abc-icon": HTMLAbcIconElement;
+        "abc-input": HTMLAbcInputElement;
         "abc-lazy-loading": HTMLAbcLazyLoadingElement;
         "abc-modal": HTMLAbcModalElement;
         "abc-modal-body": HTMLAbcModalBodyElement;
@@ -169,12 +171,14 @@ declare namespace LocalJSX {
     interface AbcButton {
         "color"?: string;
     }
-    interface AbcChartBar {
-    }
     interface AbcCustomization {
         "values"?: any;
     }
     interface AbcIcon {
+        "icon"?: string;
+        "position"?: string;
+    }
+    interface AbcInput {
         "icon"?: string;
         "position"?: string;
     }
@@ -205,9 +209,9 @@ declare namespace LocalJSX {
         "abc-alert": AbcAlert;
         "abc-budget": AbcBudget;
         "abc-button": AbcButton;
-        "abc-chart-bar": AbcChartBar;
         "abc-customization": AbcCustomization;
         "abc-icon": AbcIcon;
+        "abc-input": AbcInput;
         "abc-lazy-loading": AbcLazyLoading;
         "abc-modal": AbcModal;
         "abc-modal-body": AbcModalBody;
@@ -225,9 +229,9 @@ declare module "@stencil/core" {
             "abc-alert": LocalJSX.AbcAlert & JSXBase.HTMLAttributes<HTMLAbcAlertElement>;
             "abc-budget": LocalJSX.AbcBudget & JSXBase.HTMLAttributes<HTMLAbcBudgetElement>;
             "abc-button": LocalJSX.AbcButton & JSXBase.HTMLAttributes<HTMLAbcButtonElement>;
-            "abc-chart-bar": LocalJSX.AbcChartBar & JSXBase.HTMLAttributes<HTMLAbcChartBarElement>;
             "abc-customization": LocalJSX.AbcCustomization & JSXBase.HTMLAttributes<HTMLAbcCustomizationElement>;
             "abc-icon": LocalJSX.AbcIcon & JSXBase.HTMLAttributes<HTMLAbcIconElement>;
+            "abc-input": LocalJSX.AbcInput & JSXBase.HTMLAttributes<HTMLAbcInputElement>;
             "abc-lazy-loading": LocalJSX.AbcLazyLoading & JSXBase.HTMLAttributes<HTMLAbcLazyLoadingElement>;
             "abc-modal": LocalJSX.AbcModal & JSXBase.HTMLAttributes<HTMLAbcModalElement>;
             "abc-modal-body": LocalJSX.AbcModalBody & JSXBase.HTMLAttributes<HTMLAbcModalBodyElement>;
