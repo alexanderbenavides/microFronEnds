@@ -1,11 +1,11 @@
 div {
   width: 25px;
   height: 25px;
-  background: var(--color-primary);
+  background: #007bff;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--color-white);
+  color: #ffffff;
   border-radius: 50%;
   font-weight: bolder;
 }

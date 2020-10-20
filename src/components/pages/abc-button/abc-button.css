@@ -2,50 +2,50 @@ button {
   border: 0;
   padding: 10px 25px;
   border-radius: 3px;
-  background-color: var(--color-secondary);
-  color: var(--color-light);
+  background-color: #6c757d;
+  color: #f8f9fa;
   outline: none;
   cursor: pointer;
   border: 1px solid #ccc;
 }
 
 :host([color]) button.primary {
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  background-color: #007bff;
+  color: #ffffff;
 }
 :host([color]) button.secondary {
-  background-color: var(--color-secondary);
-  color: var(--color-white);
+  background-color: #6c757d;
+  color: #ffffff;
 }
 :host([color]) button.success {
-  background-color: var(--color-success);
-  color: var(--color-white);
+  background-color: #28a745;
+  color: #ffffff;
 }
 :host([color]) button.danger {
-  background-color: var(--color-danger);
-  color: var(--color-white);
+  background-color: #dc3545;
+  color: #ffffff;
 }
 :host([color]) button.warning {
-  background-color: var(--color-warning);
-  color: var(--color-white);
+  background-color: #ffc107;
+  color: #ffffff;
 }
 :host([color]) button.info {
-  background-color: var(--color-info);
-  color: var(--color-white);
+  background-color: #17a2b8;
+  color: #ffffff;
 }
 :host([color]) button.light {
-  background-color: var(--color-light);
-  color: var(--color-dark);
+  background-color: #f8f9fa;
+  color: #343a40;
 }
 :host([color]) button.dark {
-  background-color: var(--color-dark);
-  color: var(--color-light);
+  background-color: #343a40;
+  color: #f8f9fa;
 }
 :host([color]) button.white {
-  background-color: var(--color-white);
-  color: var(--color-dark);
+  background-color: #ffffff;
+  color: #343a40;
 }
 :host([color]) button.transparent {
-  background-color: var(--color-transparent);
-  color: var(--color-dark);
+  background-color: transparent;
+  color: #343a40;
 }
